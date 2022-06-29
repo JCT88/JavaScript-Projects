@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/styles.css">
+    
+
+    <!-- BootstrapV5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+
+    <!-- Scripts -->
+    <script src="./JS/main.js"></script>
+</head>
+<body>
+
+
+
+
+
+<div class="container">
+
+    <h1>Calculator</h1>
+
+    <form>
+
+
+
+        <!-- data input ---------------------------->
+
+        <!-- first number -->
+        <div class="mb-3" id="first_field">
+            <label for="" class="form-label">First Number</label>
+            <input type="text" class="form-control" id="first_number" aria-describedby="emailHelp">
+        </div>
+
+        <!-- second number -->
+        <div class="mb-3" id="second_field">
+            <label for="" class="form-label">Second Number</label>
+            <input type="text" class="form-control" id="second_number">
+        </div>
+
+
+
+        <!-- operator selection -------------------->
+
+        <!-- add check -->
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="add_radio" onclick="showSecondField();">
+            <label class="form-check-label" for="add_radio">
+              Add
+            </label>
+        </div>
+
+        <!-- subtraction check -->
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="subtract_radio" onclick="showSecondField();">
+            <label class="form-check-label" for="subtract_radio">
+              Subtract
+            </label>
+        </div>
+        
+        <!-- multiply check -->
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="multiply_radio" onclick="showSecondField();">
+            <label class="form-check-label" for="multiply_radio">
+              Multiply
+            </label>
+        </div>
+        
+        <!-- divide check -->
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="divide_radio" onclick="showSecondField();">
+            <label class="form-check-label" for="divide_radio">
+              Divide
+            </label>
+        </div>
+
+        <!-- mult check -->
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="multiple_radio" onclick="showSecondField();">
+            <label class="form-check-label" for="mult_radio">
+                Multiple
+            </label>
+        </div>
+
+        <!-- remainder check -->
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="remainder_radio" onclick="showSecondField();">
+            <label class="form-check-label" for="remainder_radio">
+                Remainder
+            </label>
+        </div>
+              
+        <!-- unary check -->
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="unary_radio" onclick="hideSecondField();">
+            <label class="form-check-label" for="unary_radio">
+                Negative
+            </label>
+        </div>
+
+        <!-- increment check -->
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="increment_radio" onclick="hideSecondField();">
+            <label class="form-check-label" for="increment_radio">
+                Increment
+            </label>
+        </div>
+
+        <!-- decrement check -->
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="decrement_radio" onclick="hideSecondField();">
+            <label class="form-check-label" for="decrement_radio">
+                Decrement
+            </label>
+        </div>
+
+        <!-- random check -->
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="random_radio" onclick="showSecondField();">
+            <label class="form-check-label" for="random_radio">
+                Random (Choose a range)
+            </label>
+        </div>
+
+
+        <!-- event handler button -->
+        <button type="button" class="btn btn-primary" onclick="doMath();">Solve!</button>
+    </form>
+
+
+
+    <h1 class="text-success text-center" id="result"></h1>
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
