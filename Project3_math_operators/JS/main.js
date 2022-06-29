@@ -25,16 +25,16 @@ function getNumbers(){
 
 // find the operator
 function getRadio(){
-    addOp = document.getElementById("add_radio");
-    subOp = document.getElementById("subtract_radio");
-    multOp = document.getElementById("multiply_radio");
-    divOp = document.getElementById("divide_radio");
-    multiOp = document.getElementById("multiple_radio");
-    remOp = document.getElementById('remainder_radio');
-    unOp = document.getElementById('unary_radio');
-    inOp = document.getElementById("increment_radio");
-    deOp = document.getElementById("decrement_radio");
-    random = document.getElementById("random_radio")
+    addOp =     document.getElementById("add_radio");
+    subOp =     document.getElementById("subtract_radio");
+    multOp =    document.getElementById("multiply_radio");
+    divOp =     document.getElementById("divide_radio");
+    multiOp =   document.getElementById("multiple_radio");
+    remOp =     document.getElementById('remainder_radio');
+    unOp =      document.getElementById('unary_radio');
+    inOp =      document.getElementById("increment_radio");
+    deOp =      document.getElementById("decrement_radio");
+    random =    document.getElementById("random_radio")
 }
 
 
