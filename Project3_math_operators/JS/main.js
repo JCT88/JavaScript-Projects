@@ -17,7 +17,7 @@ let addOp,
     deOp,
     random;
 
-// find addends in DOM
+// find values in DOM
 function getNumbers(){
     calcInts.one = Math.floor(document.getElementById("first_number").value);
     calcInts.two = Math.floor(document.getElementById("second_number").value);
@@ -145,7 +145,7 @@ function doMath(){
 
     }
 
-    // check increment
+    // check random
     if(random.checked == true){
 
         let p = document.getElementById('result');
