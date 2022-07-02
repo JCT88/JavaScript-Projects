@@ -35,3 +35,4 @@ console.log((42===44)||(false===true)) // neither are true = false
 // using the not operator
 console.log(!true) // not true = false 
 console.log(!false) // double negatives return a positive
+
