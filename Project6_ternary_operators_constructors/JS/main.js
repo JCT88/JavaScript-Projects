@@ -32,7 +32,7 @@ function nestedFunction(){
 
     document.getElementById("User_Number").style.visibility = "hidden"
     document.getElementById("User_Number").style.position = "absolute"
-    
+
     let User_Number = document.getElementById("User_Number").value
     
         function countDown(num){
@@ -46,7 +46,6 @@ function nestedFunction(){
 
             // Doesn't work in IE9 or earlier
             let delay = setTimeout(function(){countDown(User_Number)}, 75)
-
 
         }
         
