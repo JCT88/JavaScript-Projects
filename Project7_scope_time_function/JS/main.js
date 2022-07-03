@@ -44,6 +44,9 @@ function timeFunction() {
     // find DOM element
     let Time_of_Day = document.getElementById("Time_of_Day");
 
+    // programed reply
+    let reply;
+
     // decide what section of day it is
     if (Time < 12 == Time >0){
         reply = "It is morning time!"
