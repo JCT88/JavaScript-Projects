@@ -57,7 +57,7 @@ function rightArrow(){
     // check if last slide
     if (currentSlide <= slides.length-2) {
         
-        // increase slide index and render
+        // increase slide index and render slides
         currentSlide += 1
         renderSlides()
 
@@ -71,7 +71,7 @@ function leftArrow(){
     // check if first slide
     if (currentSlide > 0) {
 
-        // decrease slide index and render
+        // decrease slide index and render slides
         currentSlide -= 1
         renderSlides()
     }
