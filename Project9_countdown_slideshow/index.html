@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Sounds</title>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/styles.css">
+    
+
+    <!-- BootstrapV5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+
+    <!-- Scripts -->
+    <script src="./JS/main.js"></script>
+</head>
+<body>
+
+
+
+
+<div class="container">
+
+    <!-- timer section -->
+    <div class="mt-5 mb-3">
+        <!-- label for the form -->
+        <label for="user_time" class="form-label">Timer</label>
+        <!-- user input for time -->
+        <input type="text" class="form-control" id="user_time" placeholder="How long?">
+    </div>
+    <!-- start timer button -->
+    <button type="button" class="btn btn-dark" onclick="timer();">Start</button>
+
+
+    <!-- slide show section -->
+    <div id="slide_show" class="mt-5">
+
+        <div class="slides">
+
+            <!-- left arrow -->
+            <div class=""><img src="./Images/right-arrow.png" alt="" class="left-arrow" onclick="leftArrow();"></div>
+
+            <!-- caption -->
+            <div class="caption-container">
+                <h1><span class="badge bg-dark">Planet and Moon</span></h1>
+            </div>
+
+            <!-- image -->
+            <img class="cover" src="./Images/image1.jpg" alt="">
+
+            <!-- right arrow -->
+            <div class=""><img src="./Images/right-arrow.png" alt="" class="right-arrow" onclick="rightArrow();"></div>
+
+        </div>
+        
+        <div class="slides">
+
+            <!-- left arrow -->
+            <div class=""><img src="./Images/right-arrow.png" alt="" class="left-arrow" onclick="leftArrow();"></div>
+
+            <!-- caption -->
+            <div class="caption-container">
+                <h1><span class="badge bg-dark">Nebula</span></h1>
+            </div>
+
+            <!-- image -->
+            <img class="cover" src="./Images/image2.jpg" alt="">
+
+            <!-- right arrow -->
+            <div class=""><img src="./Images/right-arrow.png" alt="" class="right-arrow" onclick="rightArrow();"></div>
+
+        </div>
+        
+        <div class="slides">
+
+            <!-- left arrow -->
+            <div class=""><img src="./Images/right-arrow.png" alt="" class="left-arrow" onclick="leftArrow();"></div>
+
+            <!-- caption -->
+            <div class="caption-container">
+                <h1><span class="badge bg-dark">More space. Wow</span></h1>
+            </div>
+
+            <!-- image -->
+            <img class="cover" src="./Images/image3.jpg" alt="">
+            
+            <!-- right-arrow -->
+            <div class=""><img src="./Images/right-arrow.png" alt="" class="right-arrow" onclick="rightArrow();"></div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
