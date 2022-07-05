@@ -32,6 +32,8 @@ function timer(){
 
 // current slide
 let currentSlide = 0;
+
+// slide class array
 let slides;
 
 // render slides
@@ -54,8 +56,8 @@ function renderSlides(){
 // next slide
 function rightArrow(){
 
-    // check if last slide
-    if (currentSlide <= slides.length-2) {
+    // run if not last slide
+    if (currentSlide < slides.length-1) {
         
         // increase slide index and render slides
         currentSlide += 1
@@ -68,7 +70,7 @@ function rightArrow(){
 // last slide
 function leftArrow(){
 
-    // check if first slide
+    // run if not first slide
     if (currentSlide > 0) {
 
         // decrease slide index and render slides

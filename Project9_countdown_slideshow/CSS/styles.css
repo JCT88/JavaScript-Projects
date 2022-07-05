@@ -7,6 +7,7 @@
 
 #slide_show{
     position: relative;
+    box-shadow: 5px 5px 10px;
 }
 
 .right-arrow,
