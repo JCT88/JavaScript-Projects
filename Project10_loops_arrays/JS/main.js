@@ -50,10 +50,8 @@ function mathConstants() {
     document.getElementById('constant').innerHTML = "Pi is " + MathConstants.pi
 }
 
-function getKeyByValue(object, value) {
-    return Object.keys(object).find(key => object[key] === value);
-}
-  
+
+
 
 function getMonths () {
     Months.listMonths()

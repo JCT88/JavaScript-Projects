@@ -1,0 +1,50 @@
+/* includes table and canvas */
+.center-container{
+    /* width */
+    width: 608px;
+    /* centers */
+    margin: 0 auto;
+    /* drop from top */
+    margin-top: 50px;
+}
+
+h1{
+    display: block;
+    text-align: center;
+}
+
+table{
+    /* collapse borders into one */
+    border-collapse: collapse;
+    /* hide table border */
+    border-style: hidden;
+}
+
+td{
+    /* change cursor on hover */
+    cursor: pointer;
+    /* set border style */
+    border: 4px solid rgba(252, 3, 3, 0.8);
+    /* remove padding */
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+}
+
+canvas{
+    /* align with the container */
+    position: absolute;
+    /* place on top of the table */
+    z-index: 10;
+    /* make canvas invisible */
+    pointer-events: none;
+}
+
+h1{
+    color: orange;
+    text-shadow: 2px 2px 5px black;
+    font-family: 'Rubik Moonrocks', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
