@@ -9,8 +9,10 @@ window.addEventListener( 'load',
         // add event listeners
         Keys.addEventListener('click', (event) => {
 
+            // create object for element that was clicked
             const {target} = event
 
+            // exit if it's not a button
             if(!target.matches('button')){return}
 
             if(target.classList.contains('operator')){
@@ -33,6 +35,7 @@ window.addEventListener( 'load',
 
             }
 
+            // make sure AC clears all numbers
             if(target.classList.contains('all-clear')){
 
                 Calculator_Reset()
@@ -57,23 +60,29 @@ window.addEventListener( 'load',
 )
 
 
-
+// keep track of values
 const Calculator = {
 
+    // display 0 on the screen
     Display_Value: '0',
 
+    // hold the first operand for any expression
     First_Operand: null,
 
+    // checks if the second operand has been input
     Wait_Second_Operand: false,
 
+    // holds the operator
     operator: null
 
 }
 
+// handles events when buttons are clicked
 function Input_Digit(digit){
 
     const {Display_Value, Wait_Second_Operand} = Calculator
 
+    // check if second operand is chosen and update display
     if (Wait_Second_Operand === true){
 
         Calculator.Display_Value = digit
@@ -82,16 +91,20 @@ function Input_Digit(digit){
 
     } else {
 
+        // overwrite if 0, or add to the digit
         Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit
 
     }
 
 }
 
+// handle decimal points
 function Input_Decimal(dot){
 
+    // handle accidental clicks of the decimal button
     if(Calculator.Wait_Second_Operand === true) return;
 
+    // add a decimal if there isn't one
     if(!Calculator.Display_Value.includes(dot)){
 
         Calculator.Display_Value += dot
@@ -100,12 +113,15 @@ function Input_Decimal(dot){
 
 }
 
+// handle operators
 function Handle_Operators(Next_Operator){
 
     const {First_Operand, Display_Value, operator} = Calculator
 
+    // solve and store in first operand if none exists
     const Value_of_Input = parseFloat(Display_Value)
 
+    // if operator and second operand exists, then update operator and exit
     if(operator && Calculator.Wait_Second_Operand){
 
         Calculator.operator = Next_Operator
@@ -118,14 +134,18 @@ function Handle_Operators(Next_Operator){
 
         Calculator.First_Operand = Value_of_Input
 
+    // if operator exists
     } else if(operator){
 
         const Value_Now = First_Operand || 0;
 
+        // solve with current value and new value
         let result = Perform_Calculation[operator] (Value_Now, Value_of_Input);
 
+        // only display 9 digits
         result = Number(result).toFixed(9)
 
+        // remove trailing 0s
         result = (result * 1).toString()
 
         Calculator.Display_Value = parseFloat(result)
@@ -166,6 +186,7 @@ function Calculator_Reset(){
 
 }
 
+// use Display_Value
 function Update_Display(){
 
     const display = document.querySelector('.calculator-screen')
