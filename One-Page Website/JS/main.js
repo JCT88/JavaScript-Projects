@@ -63,6 +63,13 @@ function rightArrow(){
         currentSlide += 1
         renderSlides()
 
+    // if it's the last slide
+    } else if (currentSlide = slides.length-1) {
+    
+        // return to slide one
+        currentSlide = 0
+        renderSlides()
+
     }
 
 }
@@ -76,6 +83,14 @@ function leftArrow(){
         // decrease slide index and render slides
         currentSlide -= 1
         renderSlides()
+
+    // if it's the first slide
+    } else if (currentSlide == 0) {
+    
+        // go to last slide
+        currentSlide = slides.length-1
+        renderSlides()
+
     }
 
 }

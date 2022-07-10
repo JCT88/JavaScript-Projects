@@ -95,6 +95,11 @@ input{
     bottom: 8px;
 }
 
+#contact{
+    width: 100%;
+    padding: 30px;
+}
+
 /* Modal */
 img{
     cursor: pointer;
